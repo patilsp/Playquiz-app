@@ -1,0 +1,8 @@
+{
+  "firestore": [
+    {
+      "database": "ai-studio-android-playquiz-6ac98a73-9c54-45df-bb76-ced17f4a0347",
+      "rules": "firestore.rules"
+    }
+  ]
+}

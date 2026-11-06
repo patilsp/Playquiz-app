@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="firestore_database_id" translatable="false">ai-studio-android-playquiz-6ac98a73-9c54-45df-bb76-ced17f4a0347</string>
+    <string name="recaptcha_site_key" translatable="false">6Ldf7BIuAAAAAOlph_83mRadBwVEP5wxZSqRm_Z-</string>
+</resources>

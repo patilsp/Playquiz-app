@@ -1,0 +1,56 @@
+{
+  "entities": {
+    "User": {
+      "path": "users/{userId}",
+      "properties": {
+        "uid": { "type": "string" },
+        "displayName": { "type": "string" },
+        "avatar": { "type": "string" },
+        "schoolClass": { "type": "number" },
+        "xp": { "type": "number" },
+        "stars": { "type": "number" },
+        "streakDays": { "type": "number" },
+        "lastActiveDate": { "type": "string" },
+        "badges": { "type": "array", "items": { "type": "string" } },
+        "createdAt": { "type": "timestamp" },
+        "updatedAt": { "type": "timestamp" }
+      }
+    },
+    "Quiz": {
+      "path": "quizzes/{quizId}",
+      "properties": {
+        "quizId": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "schoolClass": { "type": "number" },
+        "subject": { "type": "string" },
+        "topic": { "type": "string" },
+        "topicKey": { "type": "string" },
+        "difficulty": { "type": "string" },
+        "questions": { "type": "array" },
+        "estimatedMinutes": { "type": "number" },
+        "createdById": { "type": "string" },
+        "isApproved": { "type": "boolean" },
+        "language": { "type": "string" },
+        "playCount": { "type": "number" },
+        "createdAt": { "type": "timestamp" }
+      }
+    },
+    "Attempt": {
+      "path": "users/{userId}/attempts/{attemptId}",
+      "properties": {
+        "attemptId": { "type": "string" },
+        "userId": { "type": "string" },
+        "quizId": { "type": "string" },
+        "quizTitle": { "type": "string" },
+        "subject": { "type": "string" },
+        "score": { "type": "number" },
+        "totalQuestions": { "type": "number" },
+        "xpEarned": { "type": "number" },
+        "starsEarned": { "type": "number" },
+        "timeTakenSeconds": { "type": "number" },
+        "completedAt": { "type": "timestamp" }
+      }
+    }
+  }
+}

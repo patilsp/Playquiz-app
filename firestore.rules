@@ -1,0 +1,24 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // User profile and subcollections matching authenticated UID
+    match /users/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+      
+      match /attempts/{attemptId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+    }
+
+    // Public & shared quizzes
+    match /quizzes/{quizId} {
+      allow read: if true;
+      allow create, update: if request.auth != null 
+        && request.resource.data.createdById == request.auth.uid;
+      allow delete: if request.auth != null 
+        && resource.data.createdById == request.auth.uid;
+    }
+  }
+}

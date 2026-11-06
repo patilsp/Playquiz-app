@@ -1,0 +1,6 @@
+{
+  "name": "PlayQuiz",
+  "description": "Learn. Play. Win. AI-powered educational quiz game for children in Classes 1–10.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
